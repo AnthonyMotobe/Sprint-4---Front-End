@@ -1,0 +1,570 @@
+:root{
+    --light: #eaeaea;
+    --primary: #224395;
+    --secondary: #FF0000;
+    --terciary: #7499F8;
+    --accent: #FF3131;
+    --darker-accent: #710000;
+    --shadow: #00000099;
+    --grey: #C7C8CA;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "NATS";
+    src: url(../assets/fonts/NATS-Regular.ttf);
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: 'NATS', sans-serif;
+    background-color: var(--light);
+}
+
+.container{
+    height: 110rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+header{
+    & .top-header, .bottom-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+  
+      & div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+  
+        & p{
+          margin: 0;
+          font-size: 1rem;
+        }
+  
+        & a{
+          text-decoration: none;
+          color: black;
+          font-size: 1rem;
+        }
+  
+        & a:hover{
+          border-bottom: 1px solid black;
+        }
+        
+        & #fia{
+          height: 2rem;
+        }
+  
+        & #formulae{
+          height: 1.5rem;
+          margin-top: 1rem;
+        }
+  
+        & .bi{
+          font-size: 1.8rem;
+          align-self: flex-end;
+        }
+  
+        & nav{
+          display: flex;
+          gap: 0.5rem;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  
+    & .top-header{
+      background-color: var(--light);
+  
+      & .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        & a:hover{
+          border-bottom: none;
+        }
+      }
+    }
+  
+    & .bottom-header{
+      background-color: var(--primary);
+      padding: 0.5rem 1rem;
+  
+      & nav{
+        & a{
+          color: var(--light);
+        }
+      }
+  
+      & nav a:hover{
+        border-bottom: 1px solid var(--light);
+      }
+  
+      & #searchInput{
+        position: relative;
+        & input{
+          border: none;
+          border-radius: 2.5rem;
+          padding: 0.3rem 0 0.3rem 2rem;
+          width: 100%;
+          background-color: var(--terciary);
+        }
+  
+        & input::placeholder{
+          color: var(--shadow);
+        }
+  
+        & .bi{
+          position: absolute;
+          left: 5%;
+          top: 1%;
+          font-size: 1rem;
+          color: var(--shadow);
+        }
+      }
+    }
+}
+
+.content-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 55rem;
+    background-image: url(../assets/images/background-garagem-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    & .header-garagem{
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        & h1{
+            font-size: 100px;
+        }
+
+        & p{
+            font-size: 2rem;
+        }
+    }
+
+    & .equipe-andretti{  
+        margin-top: -2.5rem;
+        height: 850px;
+        width: 100%;
+    }
+}
+
+.content-2{
+    height: 800px;
+    width: 100%;
+    background-image: url(../assets/images/background-garagem-2.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .caixa-infos{
+        display: grid;
+        width: 1300px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        height: 435px;
+        background-color: var(--light);
+        padding: 2rem;
+        gap: 1rem;
+        border-radius: 10px;
+        & .hero-corridas{
+            height: 370px;
+            width: 610px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../assets/images/background-corridas.png);
+            border-radius: 10px;
+            font-size: 60px;
+            color: var(--light);
+        } 
+
+        & .lista-corridas{
+          background-color: var(--grey);
+          border-radius: 10px;
+          border: 1px solid var(--shadow);
+            & table{
+                width: 100%;
+                border-collapse: collapse;
+                display: flex;
+                border-radius: 10px;
+            }
+
+            & th, td{
+                text-align: center;
+                width: 122px;
+                height: 15px;
+                font-size: 15px;
+                & p{
+                    color: var(--grey);
+                }
+            }
+            
+          & .button {
+            background-color: var(--primary);
+            border: none;
+            color: var(--light);
+            padding: 2px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+          }
+  
+          & .grey-button {
+            background-color: rgb(167, 166, 166);
+            border: none;
+            color: var(--primary);
+            padding: 1px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            border-radius: 20px;
+        }
+    }
+  }
+}
+
+
+footer{
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    color: var(--light);
+  }
+
+
+
+
+
+
+
+
+@media (width <= 600px){
+    header{
+        & .top-header, .bottom-header{
+          padding: 0 0.5rem;
+      
+          & div{
+            gap: 0.2rem;
+      
+            & p{
+              margin: 0;
+              font-size: 1rem;
+            }
+      
+            & a{
+              font-size: 10px;
+            }
+            
+            & #fia{
+              height: 0.8rem;
+            }
+      
+            & #formulae{
+              height: 0.8rem;
+            }
+      
+            & .bi{
+              font-size: 0.8rem;
+            }
+      
+          }
+        }
+      
+        & .bottom-header{
+          padding: 0.5rem 0.8rem;
+      
+          & #searchInput{
+            & input{
+              padding: 0.3rem 0 0.3rem 0rem;
+              height: 1rem;
+              width: 40%;
+            }
+      
+            & input::placeholder{
+              font-size: 10px;
+              padding-left: 1.5rem;
+            }
+      
+            & .bi{
+              position: relative;
+              left: 10%;
+              font-size: 0.5rem;
+            }
+          }
+        }
+    }
+
+ .container{
+  height: 1000px;
+ }
+  .content-1{
+    align-content: center;
+    height: 16rem;
+    width: 100%;
+      & .header-garagem{
+          height: 1.5rem;
+          gap: 1rem;
+  
+          & h1{
+              font-size: 1.5rem;
+          }
+  
+          & p{
+              font-size: 0.7rem;
+          }
+      }
+  
+      & .equipe-andretti{  
+          margin-top: -10px;
+          height: 245px;
+          width: 100%;
+      }
+  }
+
+  .content-2{
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    width: 100%;
+    & .caixa-infos{
+        width: 300px;
+        grid-template-columns: repeat(1, 400px);
+        grid-template-rows: repeat(2, 1fr);
+        height: 300px;
+        padding: 1rem;
+        gap: 0;
+        border-radius: 30px;
+        & .hero-corridas{
+            height: 50px;
+            width: 67%;
+            font-size: 20px;
+            border-radius: 20px;
+        } 
+
+        & .lista-corridas{
+          width: 67%;
+          height: 200px;
+
+        & th, td{
+            width: 55px;
+            height: 15px;
+            font-size: 7.5px;
+            
+          & .button {
+            padding: 2px 15px;
+            font-size: 7px;
+            margin: 2px 2px;
+          }
+  
+          & .grey-button {
+            padding: 1px 15px;
+            font-size: 7px;
+            margin: 3.5px 2px;
+        }
+    }
+  }
+}
+
+    footer{
+        &{
+            font-size: 10px; 
+        }
+      }
+  }
+}
+
+@media (600px < width <= 1000px){
+    header{
+      & .top-header, .bottom-header{
+        padding: 0 0.5rem;
+    
+        & div{
+          gap: 0.2rem;
+    
+          & p{
+            margin: 0;
+            font-size: 1rem;
+          }
+    
+          & a{
+            font-size: 15px;
+          }
+          
+          & #fia{
+            height: 1rem;
+          }
+    
+          & #formulae{
+            height: 1rem;
+          }
+    
+          & .bi{
+            font-size: 1rem;
+          }
+    
+        }
+      }
+    
+      & .bottom-header{
+        padding: 0.5rem 0.8rem;
+    
+        & #searchInput{
+          & input{
+            padding: 0.3rem 0 0.3rem 0rem;
+            height: 1.5rem;
+            width: 40%;
+          }
+    
+          & input::placeholder{
+            font-size: 10px;
+            padding-left: 1.5rem;
+          }
+    
+          & .bi{
+            position: relative;
+            left: 10%;
+            font-size: 0.5rem;
+            margin-bottom: 3px;
+          }
+        }
+      }
+  }
+
+.container{
+  height: 1000px;
+}
+.content-1{
+  align-content: center;
+  height: 28.5rem;
+  width: 100%;
+    & .header-garagem{
+        height: 2rem;
+        gap: 1rem;
+
+        & h1{
+            font-size: 2rem;
+        }
+
+        & p{
+            font-size: 1rem;
+        }
+    }
+
+    & .equipe-andretti{  
+        margin-top: -20px;
+        height: 450px;
+        width: 100%;
+    }
+  }
+
+.content-2{
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  width: 100%;
+  & .caixa-infos{
+      margin: 200px 0 200px;
+      width: 400px;
+      grid-template-columns: repeat(1, 400px);
+      grid-template-rows: repeat(2, 1fr);
+      height: 400px;
+      padding: 1rem;
+      gap: 0;
+      border-radius: 30px;
+      & .hero-corridas{
+          height: 100px;
+          width: 92%;
+          font-size: 30px;
+          border-radius: 20px;
+      } 
+
+      & .lista-corridas{
+        width: 92%;
+        height: 250px;
+
+      & th, td{
+          width: 100px;
+          height: 24.5px;
+          font-size: 10px;
+          
+        & .button {
+          padding: 3px 18px;
+          font-size: 7px;
+          margin: 2px 2px;
+        }
+
+        & .grey-button {
+          padding: 1px 18px;
+          font-size: 7px;
+          margin: 3.5px 2px;
+        }
+      }
+    }
+  }
+}
+}
+
+@media (1300px < height < 1400px){
+.container{
+  height: 1500px;
+}
+
+.content-1{
+  align-content: center;
+  height: 35rem;
+  width: 100%;
+    & .header-garagem{
+        height: 2rem;
+        gap: 1rem;
+  
+        & h1{
+            font-size: 2rem;
+        }
+
+        & p{
+            font-size: 1rem;
+        }
+    }
+
+    & .equipe-andretti{  
+        margin-top: -20px;
+        height: 600px;
+        width: 100%;
+    }
+  }
+
+
+}
