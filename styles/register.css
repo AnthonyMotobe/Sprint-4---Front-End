@@ -1,192 +1,391 @@
 :root{
-    --light: #eaeaea;
-    --primary: #224395;
-    --secondary: #FF0000;
-    --terciary: #7499F8;
-    --accent: #FF3131;
-    --darker-accent: #710000;
-    --shadow: #00000099;
-    --grey: #C7C8CA;
-  }
-  
-  @font-face {
-    font-family: "NATS";
-    src: url(../assets/fonts/NATS-Regular.ttf);
-  }
-  
-  *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  body{
-    height: 100vh;
-    width: 100%;
-    font-family: 'NATS', sans-serif;
-    background-color: var(--light);
-  }
-  
-  .container{
-    height: 100%;
+  --light: #eaeaea;
+  --primary: #224395;
+  --secondary: #FF0000;
+  --terciary: #7499F8;
+  --accent: #FF3131;
+  --darker-accent: #710000;
+  --shadow: #00000099;
+  --grey: #C7C8CA;
+}
+
+@font-face {
+  font-family: "NATS";
+  src: url(../assets/fonts/NATS-Regular.ttf);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  font-family: 'NATS', sans-serif;
+  background-color: var(--light);
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header{
+  & .top-header, .bottom-header{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-  }
-  
-  header{
-    & .top-header, .bottom-header{
+    align-items: center;
+    padding: 0 1rem;
+
+    & div{
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 0 1rem;
-  
-      & div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-  
-        & p{
-          margin: 0;
-          font-size: 2rem;
-        }
-  
-        & a{
-          text-decoration: none;
-          color: black;
-          font-size: 1rem;
-        }
-  
-        & a:hover{
-          border-bottom: 1px solid black;
-        }
-        
-        & #fia{
-          height: 2rem;
-        }
-  
-        & #formulae{
-          height: 1.5rem;
-        }
-  
-        & .bi{
-          font-size: 1.8rem;
-          align-self: flex-end;
-        }
-  
-        & nav{
-          display: flex;
-          gap: 0.5rem;
-          justify-content: center;
-          align-items: center;
-        }
+      justify-content: center;
+      gap: 0.5rem;
+
+      & p{
+        margin: 0;
+        font-size: 2rem;
       }
-    }
-  
-    & .top-header{
-      background-color: var(--light);
-  
-      & .center{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-  
-        & a:hover{
-          border-bottom: none;
-        }
+
+
+      & a{
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
       }
-    }
-  
-    & .bottom-header{
-      background-color: var(--primary);
-      padding: 0.5rem 1rem;
-  
+
+      & a:hover{
+        border-bottom: 1px solid black;
+      }
+      
+      & #fia{
+        height: 2rem;
+      }
+
+      & #formulae{
+        height: 1.5rem;
+      }
+
+      & .bi{
+        font-size: 1.8rem;
+        align-self: flex-end;
+      }
+
       & nav{
-        & a{
-          color: var(--light);
-        }
-      }
-  
-      & nav a:hover{
-        border-bottom: 1px solid var(--light);
-      }
-  
-      & #searchInput{
-        position: relative;
-        & input{
-          border: none;
-          border-radius: 2.5rem;
-          padding: 0.3rem 0 0.3rem 2rem;
-          width: 100%;
-          background-color: var(--terciary);
-        }
-  
-        & input::placeholder{
-          color: var(--shadow);
-        }
-  
-        & .bi{
-          position: absolute;
-          left: 5%;
-          top: 1%;
-          font-size: 1rem;
-          color: var(--shadow);
-        }
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
-  
-  main{
-    height: 100%;
+
+  & .top-header{
+    background-color: var(--light);
+
+    & .center{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & a:hover{
+        border-bottom: none;
+      }
+    }
+  }
+
+  & .bottom-header{
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+
+    & nav{
+      & a{
+        color: var(--light);
+      }
+    }
+
+    & nav a:hover{
+      border-bottom: 1px solid var(--light);
+    }
+
+    & #searchInput{
+      position: relative;
+      & input{
+        border: none;
+        border-radius: 2.5rem;
+        padding: 0.3rem 0 0.3rem 2rem;
+        width: 100%;
+        background-color: var(--terciary);
+      }
+
+      & input::placeholder{
+        color: var(--shadow);
+      }
+
+      & .bi{
+        position: absolute;
+        left: 5%;
+        top: 1%;
+        font-size: 1rem;
+        color: var(--shadow);
+      }
+    }
+  }
+}
+
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  & #mainContainer{
+    width: 90%; 
+    max-width: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-  
-    & #mainContainer{
-      width: 20%;
+    border-radius: 0rem;
+    padding: 4rem;
+    box-shadow: 0.3rem 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.2);
+
+    & form{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      border-radius: 2rem;
-      padding: 1rem;
-      box-shadow: 0.3rem 0.2rem 0.5rem 0.2rem rgba(0, 0, 0, 0.2);
-  
-      & form{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-  
-        & input{
-          border: none;
-          padding: 0.5rem;
-          border-radius: 0.5rem;
-        }
-  
-        & button{
-          border: none;
-          padding: 0.5rem;
-          border-radius: 0.5rem;
-          background-color: var(--primary);
-          color: var(--light);
-          cursor: pointer;
-          margin-top: 0.5rem;
-          transition: 0.4s;
-        }
-  
-        & button:hover{
-          background-color: var(--darker-accent);
-        }
+      gap: 0.5em;
+
+      & input{
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
       }
+
+      .login-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 50px; 
+        border: 1px solid rgba(0, 0, 0, 0.1); 
+        background-color: #C3C3C3;
+        cursor: pointer;
+        transition: all 0.3s ease; 
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); 
+        color: black;
+        
+    }
+    
+    .login-button img {
+        width: 20px;
+        margin-right: 12px;
+    }
+    
+    .login-button span {
+        font-size: 15px;
+        color: #333;
+        font-weight: 500; 
+    }
+    
+    .login-button:hover {
+        background-color: #f1f1f1; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); 
+        transform: translateY(-1px); 
+    }
+
+      & button{
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--primary);
+        color: var(--light);
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: 0.4s;
+        
+      }
+
+      & button:hover{
+        background-color: var(--darker-accent);
+      }
+
     }
   }
-  
-  footer{
-    background-color: var(--accent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
-    color: var(--light);
+}
+
+footer{
+  background-color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  color: var(--light);
+}
+
+@media (max-width: 480px) {
+  header .top-header, header .bottom-header {
+      flex-direction: column; 
   }
+
+  main #mainContainer {
+      padding: 2rem; 
+      width: 100%;
+  }
+
+  form input, form button {
+      padding: 0.4rem; 
+  }
+
+  form .login-button {
+      padding: 8px 16px;
+      font-size: 14px; 
+  }
+
+  form .login-button img {
+      width: 16px; 
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  main #mainContainer {
+      width: 80%;
+      padding: 3rem;
+  }
+
+  form input, form button {
+      padding: 0.5rem;
+  }
+
+  form .login-button {
+      padding: 9px 18px;
+      font-size: 15px;
+  }
+
+  form .login-button img {
+      width: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  main #mainContainer {
+      width: 30%;
+  }
+
+  form input, form button {
+      padding: 0.6rem;
+  }
+
+  form .login-button {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .top-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header .bottom-header #searchInput {
+      display: none; 
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+h1, h2 {
+  font-size: 1.5rem; 
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  h2 {
+      font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 902px) {
+  main #mainContainer {
+      width: 50%; 
+      padding: 2.5rem; 
+  }
+
+  form input, form button {
+      padding: 0.5rem; 
+  }
+
+  form .login-button {
+      padding: 9px 18px; 
+      font-size: 15px;
+  }
+
+  form .login-button img {
+      width: 18px;
+  }
+
+  h1 {
+      font-size: 1.6rem; 
+  }
+
+  h2 {
+      font-size: 1.2rem; 
+  }
+}
+
+@media (min-width: 903px) {
+  main #mainContainer {
+      width: 40%; 
+      padding: 3rem;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  h2 {
+      font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) and (max-height: 600px) {
+  main #mainContainer {
+      width: 60%; 
+      padding: 2rem; 
+  }
+
+  h1 {
+      font-size: 1.6rem; 
+  }
+
+  h2 {
+      font-size: 1.2rem; 
+  }
+
+  form input, form button {
+      padding: 0.6rem; 
+      font-size: 1rem; 
+  }
+
+  form .login-button {
+      padding: 10px 18px; 
+      font-size: 1rem; 
+  }
+
+  form .login-button img {
+      width: 18px; 
+  }
+}
+
