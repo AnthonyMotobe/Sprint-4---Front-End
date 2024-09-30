@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/register.css">
+  <link rel="stylesheet" href="../styles/login.css">
   <link rel="shortcut icon" href="../assets/icon/fe.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
   <script src="../scripts/login.js" defer></script>  
@@ -52,17 +52,35 @@
 
     <main>
       <div id="mainContainer">
-        <h2>Fazer Login</h2>
-        <form>
-          <label for="email">Email:</label>
+        <a href="../index.html" class="container">
+          <img src="../assets/images/formula-e-logo.png" alt="Logo da Formula e" id="formulae" class="formulalogo">
+        </a>
+
+        <h1>Fazer Login</h1>
+        
+        <h2>BEM VINDO(A) AO ASPHALT ACES</h2>
+        
+       
+            <form>
+
+          <button type="submit" class="login-button google"><img src="../assets/icon/google.png" alt="">Continue with Google</button>
+          <button type="submit" class="login-button facebook"><img src="../assets/icon/facebook.png" alt="">Continue with Facebook</button>
+          <button type="submit" class="login-button twitter"><img src="../assets/icon/twitter.png" alt="">Continue with Twitter</button>
+          <button type="submit" class="login-button apple"><img src="../assets/icon/apple.png" alt="">Continue with Apple</button>
+          <button type="submit" class="login-button microsoft"><img src="../assets/icon/microsoft.png" alt="">Continue with Microsoft</button>
+          <button type="submit" class="login-button formula"><img src="../assets/icon/microsoft.png" alt="">Continue with Formula E</button>
+
+          <label for="email">Endereço de Email:</label>
           <input type="email" id="email">
         
           <label for="senha">Senha:</label>
           <input type="password" id="senha">
-          
+          <a href="">Esqueceu sua senha?</a>
           <p id="errorText"></p>
 
           <button id="loginBtn">Logar</button>
+
+          <p>Não tem uma conta? <a href="register.html">Registre-se Aqui</a></p>
         </form>
       </div>
     </main>
