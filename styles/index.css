@@ -141,7 +141,7 @@ main{
       color: var(--light);
       
       & h1{
-        font-size: 14rem;
+        font-size: calc(10rem - width);
       }
 
       & #rightText{
@@ -225,7 +225,7 @@ main{
       color: var(--light);
 
       & h2{
-        font-size: 8rem;
+        font-size: 7rem;
       }
 
       & #t1{
@@ -238,12 +238,14 @@ main{
     }
 
     & #p1{
+      margin-bottom: 30px;
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
 
     & #car{
+      width: 60%;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -258,6 +260,7 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
+    height: 70vh;
 
     & #p2{
       display: flex;
@@ -274,4 +277,253 @@ footer{
   align-items: center;
   padding: 0.3rem;
   color: var(--light);
+}
+
+@media (max-width: 600px) {
+  header .top-header, header .bottom-header {
+    padding: 0 0.5rem;
+  }
+
+  header .top-header div {
+    gap: 0.2rem;
+  }
+
+  header .top-header div p {
+    font-size: 1rem;
+  }
+
+  header .top-header div a {
+    font-size: 10px;
+  }
+
+  header .top-header div #fia {
+    height: 0.8rem;
+  }
+
+  header .top-header div #formulae {
+    height: 0.8rem;
+  }
+
+  header .top-header div .bi {
+    font-size: 0.8rem;
+  }
+
+  header .bottom-header #searchInput input {
+    padding: 0.3rem 0 0.3rem 0;
+    height: 1rem;
+    width: 40%;
+  }
+
+  header .bottom-header #searchInput input::placeholder {
+    font-size: 10px;
+    padding-left: 1.5rem;
+  }
+
+  header .bottom-header #searchInput .bi {
+    font-size: 0.5rem;
+  }
+
+  main #hero img {
+    height: 10rem;
+  }
+
+  main #heroText h1 {
+    font-size: 4rem;
+  }
+
+  main #sec1 #howTo #t1{
+    font-size: 6rem;
+    margin: 0 0 -4rem 0;
+    color: black;
+  }
+
+  main #sec1 #howTo #t2{
+    font-size: 6rem;
+    margin-left: 2rem;
+    color: black;
+  }
+
+  main .sec {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  main .sec .passos {
+    width: 85%;
+    height: auto;
+  }
+
+  main .sec .passos .step {
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+  }
+
+  main .sec .passos .textos .titulos {
+    font-size: 0.7rem;
+  }
+
+  main .sec .passos .textos .paragrafos {
+    font-size: 0.7rem;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  header .top-header, header .bottom-header {
+    padding: 0 1rem;
+  }
+
+  header .top-header div p {
+    font-size: 1.5rem;
+  }
+
+  header .top-header div a {
+    font-size: 12px;
+  }
+
+  header .top-header div #fia {
+    height: 1.2rem;
+  }
+
+  header .top-header div #formulae {
+    height: 1.2rem;
+  }
+
+  header .top-header div .bi {
+    font-size: 1.2rem;
+  }
+
+  header .bottom-header #searchInput input {
+    padding: 0.3rem 0 0.3rem 0.5rem;
+    height: 1.5rem;
+    width: 60%;
+  }
+
+  header .bottom-header #searchInput input::placeholder {
+    font-size: 12px;
+    padding-left: 1.5rem;
+  }
+
+  header .bottom-header #searchInput .bi {
+    font-size: 1rem;
+  }
+
+  main #hero img {
+    height: 15rem;
+  }
+
+  main #heroText h1 {
+    font-size: 5rem;
+  }
+
+  main .sec {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+
+  main .sec .passos {
+    width: 60%;
+    height: auto;
+  }
+
+  main .sec .passos .step {
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.5rem;
+  }
+
+  main .sec .passos .textos .titulos {
+    font-size: 1.2rem;
+  }
+
+  main .sec .passos .textos .paragrafos {
+    font-size: 1.2rem;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header .top-header, header .bottom-header {
+    padding: 0 2rem;
+  }
+
+  header .top-header div p {
+    font-size: 2rem;
+  }
+
+  header .top-header div a {
+    font-size: 1rem;
+  }
+
+  header .top-header div #fia {
+    height: 2rem;
+  }
+
+  header .top-header div #formulae {
+    height: 1.5rem;
+  }
+
+  header .top-header div .bi {
+    font-size: 1.8rem;
+  }
+
+  header .bottom-header #searchInput input {
+    padding: 0.3rem 0 0.3rem 2rem;
+    height: 2rem;
+    width: 70%;
+  }
+
+  header .bottom-header #searchInput input::placeholder {
+    font-size: 1.2rem;
+    padding-left: 2rem;
+  }
+
+  header .bottom-header #searchInput .bi {
+    font-size: 1.2rem;
+  }
+
+  main #hero img {
+    height: 30rem;
+  }
+
+  main #heroText h1 {
+    font-size: 7rem;
+  }
+
+  main .sec {
+    padding: 0 5rem;
+    flex-direction: row;
+  }
+
+  main .sec .passos {
+    width: 45%;
+    height: auto;
+  }
+
+  main .sec .passos .step {
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+  }
+
+  main .sec .passos .textos .titulos {
+    font-size: 1.6rem;
+  }
+
+  main .sec .passos .textos .paragrafos {
+    font-size: 1.4rem;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
 }

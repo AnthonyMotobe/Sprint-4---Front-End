@@ -1,0 +1,445 @@
+:root {
+    --light: #eaeaea;
+    --primary: #224395;
+    --secondary: #FF0000;
+    --terciary: #7499F8;
+    --accent: #FF3131;
+    --darker-accent: #710000;
+    --shadow: #00000099;
+    --grey: #C7C8CA;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "NATS";
+    src: url(../assets/fonts/NATS-Regular.ttf);
+}
+
+body {
+    width: 100%;
+    font-family: 'NATS', sans-serif;
+    background-color: var(--light);
+}
+
+.bottom-header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+.bottom-header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.bottom-header nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-header nav a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.bottom-header nav a:hover {
+    border-bottom: 1px solid var(--light);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .hero-img {
+    height: 5%;
+    width: 100%;
+}
+
+.container .page-title {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+}
+
+.container .page-title h1 {
+    font-size: 60px;
+}
+
+.container .content-1 {
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content-1 .content-box {
+    height: 430px;
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .content-1 .content-box .left .circuito {
+    height: 433px;
+    width: 700px; 
+    border: 15px solid #224395;
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .content-1 .content-box .right {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 500px;
+    background-color: var(--grey);
+    border-radius: 19px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .content-1 .content-box .right .infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content-1 .content-box .right .infos h2 {
+    font-size: 24px;
+}
+
+.container .content-1 .content-box .right .infos p {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+.container .content-1 .content-box .right .infos .local,
+.container .content-1 .content-box .right .infos .extensao,
+.container .content-1 .content-box .right .infos .tipo-rua {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .content-1 .content-box .right .graficos {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content-1 .content-box .right .graficos h2 {
+    font-size: 24px;
+}
+
+.container .content-1 .content-box .right .graficos p {
+    font-size: 20px;
+    padding-left: 5px 5px;
+}
+
+.container .content-1 .content-box .right .graficos .dificuldade,
+.container .content-1 .content-box .right .graficos .pilotagem {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content-1 .content-box .right .graficos .graf-diff,
+.container .content-1 .content-box .right .graficos .graf-pilot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .content-1 .content-box .right .graficos .graf-diff #barra-dificuldade,
+.container .content-1 .content-box .right .graficos .graf-pilot #barra-pilotagem {
+    border: none;
+    height: 31px;
+    border-radius: 15px;
+    background-color: var(--primary);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .content-2 {
+    background-image: url(../assets/images/background-jogar-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .content-2 .bottom-left {
+    width: 100%;
+    height: 400px;
+    justify-self: left;
+}
+
+.container .content-2 .bottom-left .sua {
+    font-size: 150px;
+    margin: 0 0 -14rem 0;
+    padding-left: 5rem;
+    color: var(--light);
+}
+
+.container .content-2 .bottom-left .equipe {
+    font-size: 150px;
+    margin-left: 8rem;
+    color: var(--light);
+}
+
+.container .content-2 .bottom-right {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-self: right ;
+}
+
+.container .content-2 .bottom-right .piloto-selecionado {
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+.container .content-2 .bottom-right .piloto-selecionado img {
+    height: auto;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    color: var(--light);
+}
+
+
+@media (max-width: 1200px){
+    .container .content-1 {
+        height: 700px;
+        flex-direction: row;
+    }
+
+    .container .content-1 .content-box {
+        height: auto;
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .container .content-1 .content-box .left .circuito {
+        margin-bottom: -0.7rem;
+        height: 350px;
+        width: 550px;
+    }
+
+    .container .content-1 .content-box .right {
+        height: 300px;
+        width: 450px;
+    }
+
+    .container .content-1 .content-box .right .graficos .graf-diff #barra-dificuldade,
+    .container .content-1 .content-box .right .graficos .graf-pilot #barra-pilotagem {
+        height: 20px;
+    }
+
+    .container .content-1 .content-box .right .infos h2,
+    .container .content-1 .content-box .right .graficos h2 {
+        font-size: 15px;
+    }
+
+    .container .content-1 .content-box .right .infos p,
+    .container .content-1 .content-box .right .graficos p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bottom-header {
+        height: 40px;
+        padding: 0.5rem 1rem;
+        font-size: 0.5rem;
+    }
+
+    .bottom-header nav {
+        gap: 1rem;
+    }
+
+    .container .hero-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .container .page-title {
+        height: 40px;
+    }
+
+    .container .page-title h1 {
+        font-size: 15px;
+    }
+
+    .container .content-1 {
+        height: 700px;
+        flex-direction: column;
+    }
+
+    .container .content-1 .content-box {
+        height: auto;
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .container .content-1 .content-box .left .circuito {
+        margin-bottom: -0.7rem;
+        height: 250px;
+        width: 450px;
+    }
+
+    .container .content-1 .content-box .right {
+        height: 275px;
+        width: 400px;
+    }
+
+    .container .content-1 .content-box .right .graficos .graf-diff #barra-dificuldade,
+    .container .content-1 .content-box .right .graficos .graf-pilot #barra-pilotagem {
+        height: 20px;
+    }
+
+    .container .content-1 .content-box .right .infos h2,
+    .container .content-1 .content-box .right .graficos h2 {
+        font-size: 15px;
+    }
+
+    .container .content-1 .content-box .right .infos p,
+    .container .content-1 .content-box .right .graficos p {
+        font-size: 15px;
+    }
+
+    .container .content-2{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .content-2 .bottom-left{
+        height: 200px;
+    }
+
+    .container .content-2 .bottom-left .sua{
+        font-size: 60px;
+        margin: 0 0 -5rem;
+    }
+
+    .container .content-2 .bottom-left .equipe{
+        font-size: 60px;
+        margin-left: 10rem;
+    }
+
+    .container .content-2 .bottom-right .piloto-selecionado img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .bottom-header {
+        height: 40px;
+        padding: 0.5rem 1rem;
+        font-size: 0.5rem;
+    }
+
+    .bottom-header nav {
+        gap: 1rem;
+    }
+
+    .container .hero-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .container .page-title {
+        height: 40px;
+    }
+
+    .container .page-title h1 {
+        font-size: 15px;
+    }
+
+    .container .content-1 {
+        height: 500px;
+        flex-direction: column;
+    }
+
+    .container .content-1 .content-box {
+        height: auto;
+        width: 300px;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .container .content-1 .content-box .left .circuito {
+        margin-bottom: -0.7rem;
+        height: 200px;
+        width: 300px;
+    }
+
+    .container .content-1 .content-box .right {
+        height: 200px;
+        width: 250px;
+    }
+
+    .container .content-1 .content-box .right .graficos .graf-diff #barra-dificuldade,
+    .container .content-1 .content-box .right .graficos .graf-pilot #barra-pilotagem {
+        height: 20px;
+    }
+
+    .container .content-1 .content-box .right .infos h2,
+    .container .content-1 .content-box .right .graficos h2 {
+        font-size: 10px;
+    }
+
+    .container .content-1 .content-box .right .infos p,
+    .container .content-1 .content-box .right .graficos p {
+        font-size: 10px;
+    }
+
+    .container .content-2{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .content-2 .bottom-left{
+        height: 200px;
+    }
+
+    .container .content-2 .bottom-left .sua{
+        font-size: 60px;
+        margin: 0 0 -5rem;
+    }
+
+    .container .content-2 .bottom-left .equipe{
+        font-size: 60px;
+        margin-left: 10rem;
+    }
+
+    .container .content-2 .bottom-right .piloto-selecionado img {
+        height: auto;
+        width: 100%;
+    }
+}
